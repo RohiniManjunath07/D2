@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    margin: 0;
+    background-color: ivory;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    margin: 10px;
+}
+
+.image {
+    border: 5px solid #000;
+    transform: rotate(-45deg);
+}
+
+.image-container:nth-child(2) .image {
+    transform: rotate(45deg);
+}

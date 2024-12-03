@@ -1,0 +1,66 @@
+/* For the 4th prgrm addd inline and internal CSS */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Paragraphs Example</title>
+    <link rel="stylesheet" href="5.css">
+    <style>
+        /* Internal CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap');
+        
+        .internal-paragraph {
+            color: #8e44ad;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('https://images.unsplash.com/photo-1520170638393-3b8912b23db6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDg3OTN8MHwxfGFsbHwxfHx8fHx8fHwxNjI1NzMxNTUz&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-family: 'Lobster', cursive;
+            margin-bottom: 20px;
+        }
+        
+        p.element {
+            color: #3498db;
+        }
+        
+        #unique-paragraph {
+            color: #e74c3c;
+        }
+        
+        .class-paragraph {
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Styled Paragraphs</h1>
+        <p class="class-paragraph" style="font-weight: bold;">This paragraph is styled using a class selector and has green text color.</p>
+        <p id="unique-paragraph" style="font-style: italic;">This paragraph is styled using an ID selector and has red text color.</p>
+        <p class="element internal-paragraph">This paragraph is styled using an element selector and internal CSS with purple text color.</p>
+    </div>
+</body>
+</html>
+

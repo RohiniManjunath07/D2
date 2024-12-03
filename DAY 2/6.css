@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #d6d2ff 0%, #a49ffc 100%);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.styled-paragraph {
+    color: #34495e;             /* Text color */
+    font-size: 20px;            /* Text size */
+    font-weight: bold;          /* Font weight */
+    line-height: 1.6;           /* Line height */
+    letter-spacing: 1.2px;      /* Letter spacing */
+    word-spacing: 4px;          /* Word spacing */
+    text-align: justify;        /* Text alignment */
+    text-decoration: underline; /* Text decoration */
+    text-transform: capitalize; /* Text transformation */
+    font-style: italic;         /* Font style */
+}

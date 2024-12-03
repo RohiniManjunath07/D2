@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            padding: 10px;
+            z-index: 1000;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: white;
+            transition: box-shadow 0.3s;
+        }
+        .product:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        section {
+            margin-bottom: 40px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('nav a');
+            window.addEventListener('scroll', () => {
+                let current = '';
+                document.querySelectorAll('section').forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                links.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#electronics">ELECTRONICS</a>
+                <ul>
+                    <li><a href="#mobile-phones">Mobile Phones</a></li>
+                    <li><a href="#laptops">Laptops</a></li>
+                    <li><a href="#cameras">Cameras</a></li>
+                </ul>
+            </li>
+            <li><a href="#clothing">CLOTHING</a>
+                <ul>
+                    <li><a href="#mens-wear">Men's Wear</a></li>
+                    <li><a href="#womens-wear">Women's Wear</a></li>
+                    <li><a href="#kids-wear">Kid's Wear</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="electronics">
+        <h2>Electronics</h2>
+        <div class="product" id="mobile-phones">
+            <h3>Mobile Phones</h3>
+            <p><strong>Price:</strong> $XX.XX</p>
+            <p><strong>Description:</strong> This is a brief description of mobile phones.</p>
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+        </div>
+        <div class="product" id="laptops">
+            <h3>Laptops</h3>
+            <p><strong>Price:</strong> $45.3</p>
+            <p><strong>Description:</strong> This is a brief description of laptops.</p>
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+        </div>
+        <div class="product" id="cameras">
+            <h3>Cameras</h3>
+            <p><strong>Price:</strong> $23.00</p>
+            <p><strong>Description:</strong> This is a brief description of cameras.</p>
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="clothing">
+        <h2>Clothing</h2>
+        <div class="product" id="mens-wear">
+            <h3>Men's Wear</h3>
+            <p><strong>Price:</strong> $12.2</p>
+            <p><strong>Description:</strong> This is a brief description of men's wear.</p>
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+        </div>
+        <div class="product" id="womens-wear">
+            <h3>Women's Wear</h3>
+            <p><strong>Price:</strong> $20.5</p>
+            <p><strong>Description:</strong> This is a brief description of women's wear.</p>
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+        </div>
+        <div class="product" id="kids-wear">
+            <h3>Kid's Wear</h3>
+            <p><strong>Price:</strong> $20.00</p>
+            <p><strong>Description:</strong> This is a brief description of kid's wear.</p>
+            <h4>Key Features:</h4>
+            <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
